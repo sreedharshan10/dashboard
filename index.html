@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UEFA Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-VxMY2sFpRg3H+JGrQ3aLG5d7anwC/XkwT8bxs18Rq6gzn8HzzN4vU2K38wVz76JbIgORwXUh/oeVz8nvgcAHTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Champions League logo on the left -->
+    <a class="navbar-brand" href="#"><img src="champ.png" alt="Champions League Logo" height="40" width="40"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarTop">
+      <!-- Navigation links aligned to the right -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inside UEFA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">UEFA.tv</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Live scores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tickets and hospitality</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Store</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">All sections</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Section 1</a></li>
+            <li><a class="dropdown-item" href="#">Section 2</a></li>
+            <li><a class="dropdown-item" href="#">Section 3</a></li>
+            <!-- Add more sections as needed -->
+          </ul>
+        </li>
+      </ul>
+      <!-- Search bar aligned to the right -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <!-- Wrap the profile image and text in an anchor tag with inline styling -->
+          <a href="#" style="display: inline-block; text-decoration: none;">
+            <!-- Profile Image with inline styling -->
+            <img src="profile.png" alt="Profile Image" style="border: 0.5px solid #000000; border-radius: 50%;" width="30" height="30">
+            <!-- Profile Text -->
+            <span class="navbar-text me-3">Profile</span>
+          </a>
+          <!-- Profile Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Champions League</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Draws</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Groups</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gaming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">More</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Favorite Team</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <div class="cards" style="width: 10rem; margin: 3px; border: 1px solid rgba(0, 0, 0, 0.8);">
+          <div class="card-body text-center" style="padding: 10px;"> <!-- Added padding -->
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
+    <!-- Content Section -->
+    <main class="col-md-10 mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <!-- Real Madrid vs Barcelona -->
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <img src="uefa_logo.png" class="card-img-top" alt="UEFA Logo">
+                <div class="card-body">
+                  <h5 class="card-title">Arsenal FC vs Bayer Leverkusen</h5>
+                  <p class="card-text">Result: 1-5</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Liverpool vs Bayern Munich -->
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <img src="bundes.png" class="card-img-top" alt="UEFA Logo">
+                <div class="card-body">
+                  <h5 class="card-title">Leipzig vs Bayern Munich</h5>
+                  <p class="card-text">Result: 3-2</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Arsenal Vs Porto -->
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <img src="liga.png" class="card-img-top" alt="UEFA Logo">
+                <div class="card-body">
+                  <h5 class="card-title">Real Madrid Vs Barcelona</h5>
+                  <p class="card-text">Result: 0-3</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <img src="prem.png" class="card-img-top" alt="UEFA Logo">
+                <div class="card-body">
+                  <h5 class="card-title">Liverpool Fc Vs Tottenham</h5>
+                  <p class="card-text">Result: 3-2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+            <h5 class="mt-6">ALL TIME UCL WINNERS</h5>
+            <img src="graph.jpg" alt="Graph Image" height="550px" width="550px" class="zoom-in">
+        </div>
+        <div class="col-md-6">
+            <div style="margin-top: 6%;" id="fs-upcoming" class="pop-out"></div>
+            <script>
+                (function (w, d, s, o, f, js, fjs) {
+                    w['fsUpcomingEmbed'] = o;
+                    w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+                }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming.js'));
+                fsUpcoming('params', { teamID: 83 });
+            </script>
+            <div style="width: 500px; height: 400px; overflow: auto;" class="pop-out">
+                <iframe src="https://footystats.org/api/club?id=83" height="100%" width="100%" style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="fs-standings" class="standings-container"></div>
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w['fsStandingsEmbed'] = o;
+            w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js'));
+        mw('params', { leagueID: 9665 });
+    </script>
+    
+      <div class="row">
+        <!-- Top Scorer Card -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div>
+                <h5 class="card-title">Top Scorer</h5>
+                <p class="card-text">Top Scorer Name: Jude Bellingham</p>
+                <p class="card-text">Goals Scored: 13</p>
+              </div>
+              <!-- Football Logo -->
+              <img src="ball.png" alt="Football Logo" style="width: 30px; margin-left: auto;">
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Top Assister Card -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div>
+                <h5 class="card-title">Top Assister</h5>
+                <p class="card-text">Top Assister Name: Joao Cancelo</p>
+                <p class="card-text">Assists: 8</p>
+              </div>
+              <!-- Assist Logo -->
+              <img src="assist.png" alt="Assist Logo" style="width: 30px; margin-left: auto;">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+</div>
+
+<style>
+    .card:hover {
+      transition: transform 0.3s ease; /* Add smooth transition effect */
+      transform: scale(1.1); /* Scale the card to 105% on hover */
+
+    }
+.navbar:hover {
+      background-color: #343a40; /* Change background color on hover */
+    }
+
+    /* Hover effect for sidebar */
+    .sidebar:hover {
+      background-color: #f8f9fa; /* Change background color on hover */
+    }
+    /* Zoom-in effect for the image */
+.zoom-in {
+    transition: transform 0.3s ease;
+}
+.zoom-in:hover {
+    transform: scale(1.1);
+}
+
+/* Pop-out effect for the iframe */
+.pop-out {
+    transition: transform 0.3s ease;
+}
+.pop-out:hover {
+    transform: scale(1.1);
+}
+/* Hover effect for standings container */
+.standings-container {
+    transition: transform 0.3s ease;
+}
+.standings-container:hover {
+    transform: scale(1.1);
+}
+
+  </style>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

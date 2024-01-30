@@ -1,0 +1,17 @@
+.carousel-item img {
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: auto; /* Allow buttons to expand to fit content */
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px; /* Adjust the width of the icon as needed */
+    height: 30px; /* Adjust the height of the icon as needed */
+  }
+  .carousel-control-prev, .carousel-control-next {
+    right: auto; /* Reset right positioning */
+    left: 0; /* Align buttons to the left */
+  }
+      
